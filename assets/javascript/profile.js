@@ -179,7 +179,8 @@ function getLyrics(band, song) {
     jsonpCallback: "jsonp_callback",
     contentType: "application/json",
     success: function (data) {
-      console.log(data.message.body.lyrics.lyrics_body);
+      // console.log(data.message.body.lyrics.lyrics_body);
+      console.log(data);
       $("#musixTrack").attr('src', data.message.body.lyrics.script_tracking_url)
       $('<p>').text(data.message.body.lyrics.lyrics_body).appendTo('.artist-lyrics');
     },
