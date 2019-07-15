@@ -181,7 +181,7 @@ function getLyrics(band, song) {
     success: function (data) {
       console.log(data.message.body.lyrics.lyrics_body);
       $("#musixTrack").attr('src', data.message.body.lyrics.script_tracking_url)
-      $('<p>').text(data.message.body.lyrics.lyrics_body).appendTo('.wikiInfo');
+      $('<p>').text(data.message.body.lyrics.lyrics_body).appendTo('.artist-lyrics');
     },
     error: function (jqXHR, textStatus, errorThrown) {
       console.log(jqXHR);
